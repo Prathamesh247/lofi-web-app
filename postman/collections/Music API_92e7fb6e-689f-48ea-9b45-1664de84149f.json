@@ -1,0 +1,743 @@
+{
+    "info": {
+        "_postman_id": "9c543635-b9f9-4af8-be2e-f12f574cdadb",
+        "name": "Music API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "song",
+            "item": [
+                {
+                    "name": "getAllSongs",
+                    "id": "96064460-0fc8-473c-b23a-db51b4949fa4",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/song",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "song"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "97b03e11-fb3d-4ab3-b2c1-5192a34d3341",
+                            "name": "Details about all songs",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/song",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "song"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "A link to the next page of responses",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "x-next",
+                                    "value": "dolore cillum"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"id\": 14548917,\n  \"name\": \"est\",\n  \"tag\": \"in reprehenderit occaecat\",\n  \"artist\": \"laboris eu ad conse\",\n  \"album\": \"in sint sunt minim est\",\n  \"year\": \"exercitation cupidatat nisi dolore\"\n },\n {\n  \"id\": -89731307,\n  \"name\": \"aliqua labore ir\",\n  \"tag\": \"veniam sint ip\",\n  \"artist\": \"ad voluptate officia qui ut\",\n  \"album\": \"aliquip magna enim elit veniam\",\n  \"year\": \"ullamco esse consequat cillum\"\n }\n]"
+                        },
+                        {
+                            "id": "fa072b07-f4f9-4403-a894-13ef8bc415f9",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/song",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "song"
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 36671054,\n \"message\": \"est dolor\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "getSong",
+                    "id": "728b36b8-b4da-4ce1-a992-716021e029bb",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/song/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "song",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "9e9fec76-26e0-4125-accb-f89f363b06a9",
+                                    "key": "id",
+                                    "value": "-25734345",
+                                    "type": "any",
+                                    "description": "(Required) ID of the song"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "cfed858d-7bd2-46b8-8bb3-1bb55417573d",
+                            "name": "Details about a song by ID",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/song/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "song",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "-25734345",
+                                            "description": "(Required) ID of the song"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "A link to the next page of responses",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "x-next",
+                                    "value": "dolore cillum"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"id\": 68255605,\n \"name\": \"irure dolore mollit ex\",\n \"tag\": \"fugiat Ut proident\",\n \"artist\": \"minim aute eiusmod laborum\",\n \"album\": \"elit sunt dolor\",\n \"year\": \"nulla in adipisicing Duis\"\n}"
+                        },
+                        {
+                            "id": "aca92a7a-2162-4aca-9923-27858aa04879",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/song/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "song",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "-25734345",
+                                            "description": "(Required) ID of the song"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 36671054,\n \"message\": \"est dolor\"\n}"
+                        }
+                    ],
+                    "variable": [
+                        {
+                            "id": "9e9fec76-26e0-4125-accb-f89f363b06a9",
+                            "key": "id",
+                            "value": "-25734345",
+                            "type": "any",
+                            "description": "(Required) ID of the song"
+                        }
+                    ]
+                }
+            ],
+            "id": "a0a944fe-7f2a-4d51-ac98-3582f955c04b"
+        },
+        {
+            "name": "artist",
+            "item": [
+                {
+                    "name": "getAllArtists",
+                    "id": "b1eefe7c-c441-4c6a-ae5d-296e66d20fe0",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/artist",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "artist"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "480ebe79-3993-45ba-b467-298e3157de57",
+                            "name": "Details about all artists",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/artist",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "artist"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "A link to the next page of responses",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "x-next",
+                                    "value": "dolore cillum"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"id\": -83360944,\n  \"name\": \"sit\",\n  \"tag\": \"culpa\"\n },\n {\n  \"id\": -75718594,\n  \"name\": \"anim\",\n  \"tag\": \"cillum consequat\"\n }\n]"
+                        },
+                        {
+                            "id": "f670740e-df3d-43c6-a6e0-a6516f7df959",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/artist",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "artist"
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 36671054,\n \"message\": \"est dolor\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "getArtist",
+                    "id": "e7f82fe9-81dd-42b0-986a-bb76dea8b1e1",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/artist/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "artist",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "a975f722-114b-4024-8e9c-145f4462704d",
+                                    "key": "id",
+                                    "value": "-25734345",
+                                    "type": "any",
+                                    "description": "(Required) ID of the Artist"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "c65834c6-9ffd-4d1e-9fb4-dc927b1f7098",
+                            "name": "Details about an Artist by ID",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/artist/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "artist",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "-25734345",
+                                            "description": "(Required) ID of the Artist"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "A link to the next page of responses",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "x-next",
+                                    "value": "dolore cillum"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"id\": -89042113,\n \"name\": \"est dolor anim ex sunt\",\n \"tag\": \"qui u\"\n}"
+                        },
+                        {
+                            "id": "91835c26-bbba-4d23-9c86-de321a840d4c",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/artist/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "artist",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "-25734345",
+                                            "description": "(Required) ID of the Artist"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 36671054,\n \"message\": \"est dolor\"\n}"
+                        }
+                    ],
+                    "variable": [
+                        {
+                            "id": "a975f722-114b-4024-8e9c-145f4462704d",
+                            "key": "id",
+                            "value": "-25734345",
+                            "type": "any",
+                            "description": "(Required) ID of the Artist"
+                        }
+                    ]
+                }
+            ],
+            "id": "89f8e03b-0dd3-4303-a02a-f7d8291d5e58"
+        },
+        {
+            "name": "album",
+            "item": [
+                {
+                    "name": "getAllAlbums",
+                    "id": "afd956df-d241-4a22-bc4a-6d4542a04c25",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/album",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "album"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "cb5ec5e7-1570-473d-9aea-68b87437f20a",
+                            "name": "Details about all albums",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/album",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "album"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "A link to the next page of responses",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "x-next",
+                                    "value": "dolore cillum"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"id\": -52201234,\n  \"name\": \"et in tempor nisi\",\n  \"tag\": \"voluptate enim dolore\",\n  \"artist\": \"occaecat labor\",\n  \"year\": \"esse ea\"\n },\n {\n  \"id\": 3740651,\n  \"name\": \"cupidatat sint adipisicing Excepteur\",\n  \"tag\": \"voluptate\",\n  \"artist\": \"dolor magna\",\n  \"year\": \"magna qui esse aute\"\n }\n]"
+                        },
+                        {
+                            "id": "33afbe90-e9e8-41f7-bad8-0ba1b957c2ea",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/album",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "album"
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 36671054,\n \"message\": \"est dolor\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "getAlbum",
+                    "id": "eab70649-a6a9-45d4-a161-0d7de57dfb14",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/album/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "album",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "3f483363-1e71-45c9-bfb0-988d7d89e831",
+                                    "key": "id",
+                                    "value": "-25734345",
+                                    "type": "any",
+                                    "description": "(Required) ID of the Album"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "bb2e85d8-4222-484d-97bb-08b26757aa2c",
+                            "name": "Details about an album by ID",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/album/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "album",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "-25734345",
+                                            "description": "(Required) ID of the Album"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "A link to the next page of responses",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "x-next",
+                                    "value": "dolore cillum"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"id\": 70238914,\n \"name\": \"esse dolor\",\n \"tag\": \"ipsum esse nulla ullamco cupidata\",\n \"artist\": \"enim\",\n \"year\": \"aliquip ex aute ut\"\n}"
+                        },
+                        {
+                            "id": "8eaed095-e56e-4a92-a274-a2afa9ed2068",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/album/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "album",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "-25734345",
+                                            "description": "(Required) ID of the Album"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 36671054,\n \"message\": \"est dolor\"\n}"
+                        }
+                    ],
+                    "variable": [
+                        {
+                            "id": "3f483363-1e71-45c9-bfb0-988d7d89e831",
+                            "key": "id",
+                            "value": "-25734345",
+                            "type": "any",
+                            "description": "(Required) ID of the Album"
+                        }
+                    ]
+                }
+            ],
+            "id": "bce3a2e4-3a93-44d5-962d-bbbdaf79d197"
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "468e95d9-38c5-48a1-a15f-758497659500",
+            "key": "baseUrl",
+            "value": "https://839249c0-e159-4e26-b86b-6c11409a4c4b.mock.pstmn.io",
+            "type": "string"
+        }
+    ]
+}
